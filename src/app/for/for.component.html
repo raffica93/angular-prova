@@ -1,0 +1,25 @@
+<div class="container col-4 ">
+    <h4>Lista</h4>
+    <ul class="list-group ">
+        <li class="list-group-item "  
+        *ngFor="let character of characters;
+        let i = index;
+        let ultimo=last;
+        let pari=even "
+
+        [ngClass]="{
+        'list-group-item-success':ultimo, 
+        'list-group-item-dark':!pari && !ultimo,
+        'list-group-item-light':pari && !ultimo
+        }" 
+       >
+            <span class="text-primary "> {{i+1}}</span>
+            <strong> nome</strong>
+            <span> {{ character.nome }}</span>
+            <strong> Cognome</strong>
+            <span> {{ character.cognome }}</span>
+
+        </li>
+
+    </ul>
+</div>
