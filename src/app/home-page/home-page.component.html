@@ -1,0 +1,65 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+        </button>
+
+
+        <div class="example-button-container">
+            <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+                <mat-icon>home</mat-icon>
+            </button>
+        </div>
+        <div class="example-button-container">
+            <button mat-fab disabled aria-label="Example icon button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+
+        <section>
+            <div class="example-label">Raised</div>
+            <div class="example-button-row">
+                <button mat-raised-button>Basic</button>
+                <button mat-raised-button color="primary" (click)="drawer.toggle()">Primary</button>
+                <button mat-raised-button color="accent" (click)="drawer.toggle()">Accent</button>
+                <button mat-raised-button color="warn" (click)="drawer.toggle()">Warn</button>
+                <button mat-raised-button disabled (click)="drawer.toggle()">Disabled</button>
+                <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+            </div>
+        </section>
+
+        <button id="basic" type="button" color="primary" mat-raised-button (click)="clicked() ">
+            Basic button
+        </button>
+
+        <section>
+            <div class="example-label">FAB</div>
+            <div class="example-button-row">
+                <div class="example-flex-container">
+                    <div class="example-button-container">
+                        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                    <div class="example-button-container">
+                        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+                            <mat-icon>bookmark</mat-icon>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+</mat-drawer-container>
